@@ -14,8 +14,6 @@ Welcome to the project skeleton for web apps. This repository provides a simple 
 8. [License](#license)
 9. [Ideas](#ideas)
 
-
-
 ## Getting Started
 
 To get started, clone the repository and follow the setup instructions below.
@@ -27,31 +25,31 @@ cd web-app-skeleton
 
 ## Project Structure
 
-web-app-skeleton/
-├── backend/
-│   ├── cmd/
-│   ├── internal/
-│   │   ├── routes/
-│   │   ├── logic/
-│   │   ├── db/
-│   │   └── pb/
-│   └── main.go
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── services/
-│   │   ├── routes/
-│   │   ├── store/
-│   │   └── App.tsx
-│   └── package.json
-├── protos/
-│   ├── *.proto
-├── scripts/
-│   ├── update-dependencies.sh
-├── .github/
-│   ├── workflows/
-│   │   └── update-dependencies.yml
-└── README.md
+web-app-skeleton/  
+├── backend/  
+│   ├── cmd/  
+│   ├── internal/  
+│   │   ├── routes/  
+│   │   ├── logic/  
+│   │   ├── db/  
+│   │   └── pb/  
+│   └── main.go  
+├── frontend/  
+│   ├── src/  
+│   │   ├── components/  
+│   │   ├── services/  
+│   │   ├── routes/  
+│   │   ├── store/  
+│   │   └── App.tsx  
+│   └── package.json  
+├── protos/  
+│   ├── *.proto  
+├── scripts/  
+│   ├── update-dependencies.sh  
+├── .github/  
+│   ├── workflows/  
+│   │   └── update-dependencies.yml  
+└── README.md  
 
 * backend/: Contains the Golang backend code.
 
