@@ -1,0 +1,27 @@
+{
+    "name": "skeleton",
+    "version": "1.0.0",
+    "author": "Stefan",
+    "license": "closed",
+    "private": true,
+    "scripts": {
+      "serve": "webpack --mode development --watch --config webpack.config.js",
+      "build": "webpack --mode production --config webpack.config.js"
+    },
+    "dependencies": {
+      "@adobe/lit-mobx": "^2.0.0",
+      "@vaadin/text-area": "^23.2.8",
+      "@vaadin/button": "^23.2.8",
+      "@vaadin/vaadin-combo-box": "^23.2.8",
+      "@vaadin/number-field": "^23.2.8",
+      "@polymer/paper-spinner": "^3.0.2",
+      "@vaadin/text-field": "^23.2.8",
+      "@mdi/js": "^7.0.96",
+      "lit": "^2.2.8",
+      "mapbox-gl": "^1.13.0",
+      "prettier": "^2.0.5",
+      "mobx": "^6.6.2",
+      "moment": "^2.29.1"
+    }
+  }
+  
