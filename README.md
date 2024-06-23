@@ -26,7 +26,7 @@ cd web-app-skeleton
 ## Project Structure
 
 web-app-skeleton/  
-├── backend/  
+├── server/  
 │   ├── cmd/  
 │   ├── internal/  
 │   │   ├── routes/  
@@ -34,7 +34,7 @@ web-app-skeleton/
 │   │   ├── db/  
 │   │   └── pb/  
 │   └── main.go  
-├── frontend/  
+├── client/  
 │   ├── src/  
 │   │   ├── components/  
 │   │   ├── services/  
@@ -51,7 +51,7 @@ web-app-skeleton/
 │   │   └── update-dependencies.yml  
 └── README.md  
 
-* backend/: Contains the Golang backend code.
+* server/: Contains the Golang server code.
 
   * cmd/: Command line specific code.
   * internal/: Internal application code.
@@ -61,9 +61,9 @@ web-app-skeleton/
     * pb/: Generated Protocol Buffer code.
   * main.go: The entry point for the backend application.
 
-* frontend/: Contains the TypeScript frontend code.
+* client/: Contains the TypeScript client code.
 
-  * src/: Source code for the frontend.
+  * src/: Source code for the client.
     * components/: React components.
     * services/: Services for API calls.
     * routes/: Route definitions.
