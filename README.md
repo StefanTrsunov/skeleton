@@ -25,30 +25,15 @@ cd web-app-skeleton
 
 ## Project Structure
 
-web-app-skeleton/  
+skeleton/  
+├── .vscode/
+|   └── tasks.json
 ├── server/  
-│   ├── cmd/  
-│   ├── internal/  
-│   │   ├── routes/  
-│   │   ├── logic/  
-│   │   ├── db/  
-│   │   └── pb/  
 │   └── main.go  
 ├── client/  
-│   ├── src/  
-│   │   ├── components/  
-│   │   ├── services/  
-│   │   ├── routes/  
-│   │   ├── store/  
-│   │   └── App.tsx  
-│   └── package.json  
-├── protos/  
-│   ├── *.proto  
-├── scripts/  
-│   ├── update-dependencies.sh  
-├── .github/  
-│   ├── workflows/  
-│   │   └── update-dependencies.yml  
+├── .gitignore  
+├── go.mod
+├── go sum
 └── README.md  
 
 * server/: Contains the Golang server code.
