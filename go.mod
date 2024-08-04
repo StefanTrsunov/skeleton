@@ -1,5 +1,5 @@
-module skeleton
+module skeleton_todo
 
-go 1.22.1
+go 1.22.4
 
-require github.com/gorilla/websocket v1.5.3 // indirect
+require github.com/lib/pq v1.10.9 // indirect

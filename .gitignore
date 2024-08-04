@@ -1,6 +1,4 @@
-
-/client/node_modules
-/client/dist
-
-/server/server*
-
+node_modules/
+.env
+stefan_work.md
+package-lock.json

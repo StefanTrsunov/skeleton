@@ -26,43 +26,7 @@ cd web-app-skeleton
 ## Project Structure
 
 skeleton/  
-├── .vscode/
-|   └── tasks.json
-├── server/  
-│   └── main.go  
-├── client/  
-├── .gitignore  
-├── go.mod
-├── go sum
-└── README.md  
 
-* server/: Contains the Golang server code.
-
-  * cmd/: Command line specific code.
-  * internal/: Internal application code.
-    * routes/: HTTP route handlers.
-    * logic/: Business logic.
-    * db/: Database interactions.
-    * pb/: Generated Protocol Buffer code.
-  * main.go: The entry point for the backend application.
-
-* client/: Contains the TypeScript client code.
-
-  * src/: Source code for the client.
-    * components/: React components.
-    * services/: Services for API calls.
-    * routes/: Route definitions.
-    * store/: State management.
-    * App.tsx: The main React component.
-  * package.json: NPM package configuration.
-
-* protos/: Protocol Buffer definitions.
-
-* scripts/: Utility scripts.
-  * update-dependencies.sh: Script to update dependencies.
-
-* .github/: GitHub workflows for CI/CD.
-  * update-dependencies.yml: Workflow for automated dependency updates.
 
 ## Setup
 
@@ -85,3 +49,5 @@ Maybe have different enviorments like:
 * Development
 * Staging/Testing
 * Production
+
+sudo docker run -d --name skeleton_db -p 5434:5432 -e POSTGRES_PASSWORD=mysecretpassword postgres
