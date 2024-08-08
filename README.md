@@ -1,7 +1,5 @@
 # Project Skeleton for Web Apps
 
-
-
 ## Table of Contents
 
 1. [Getting Started](#getting-started)
@@ -21,7 +19,7 @@ git clone git@github.com:StefanTrsunov/skeleton.git
 
 ## Setup
 
-* build the UI server
+* Build the UI server
 
 ```bash
 npm run build
@@ -34,7 +32,6 @@ npm run build
 ```bash
 go run main.go
 ```
-
 
 * Start the development server:
 
