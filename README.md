@@ -39,4 +39,4 @@ go run main.go
 npm run start
 ```
 
-This is a test for FIlip
+This is a test for Filip
