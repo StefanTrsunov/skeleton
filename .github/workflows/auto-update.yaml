@@ -10,17 +10,25 @@ jobs:
     steps:
       - name: Check out repo
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Ensure all files are fetched
+
+      - name: List files for debugging
+        run: ls -R  # Check the file structure to ensure package.json exists
 
       - name: Set up Node.js environment
         uses: actions/setup-node@v3
         with:
           node-version: '18'
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install dependencies in client directory
+        run: |
+          cd client  # Navigate to the client directory where package.json is located
+          npm install
 
       - name: Check for new TypeScript version
         run: |
+          cd client  # Ensure we're in the client directory
           latest_version=$(npm show typescript version)
           current_version=$(npm list typescript | grep typescript@ | awk -F@ '{print $2}')
           echo "Latest TypeScript version: $latest_version"
@@ -36,6 +44,7 @@ jobs:
       - name: Update TypeScript version in package.json
         if: steps.update-version.outputs.new_version
         run: |
+          cd client  # Ensure we're in the client directory
           npm install typescript@$latest_version --save-dev
           npm install
 
@@ -45,7 +54,7 @@ jobs:
           git config --global user.name 'Bot'
           git config --global user.email 'bot@example.com'
           git checkout -b update-typescript-version
-          git add package.json package-lock.json
+          git add client/package.json client/package-lock.json
           git commit -m "Update TypeScript to version $latest_version"
           git push origin update-typescript-version
 
