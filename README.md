@@ -38,36 +38,3 @@ go run main.go
 ```bash
 npm run start
 ```
-
-```mermaid
-graph TD;
-    root-->doc;
-    root-->gen;
-    root-->pkg;
-    root-->proto;
-    root-->script;
-    root-->services;
-    root-->test;
-
-    doc-->database;
-    doc-->diagram;
-    doc-->notes;
-
-    gen-->go;
-    gen-->ts;
-
-    pkg-->pkg_go;
-    pkg-->static;
-    pkg-->pkg_ts;
-
-    proto-->proto_eazytms;
-    proto-->lib;
-    proto-->proto_services;
-
-
-    services-->eazytms;
-    services-->scheduler;
-
-    eazytms-->server;
-    eazytms-->client;
-```
