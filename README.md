@@ -39,4 +39,10 @@ go run main.go
 npm run start
 ```
 
-This is a test for Filip
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
