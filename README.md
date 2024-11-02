@@ -41,8 +41,33 @@ npm run start
 
 ```mermaid
 graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+    root-->doc;
+    root-->gen;
+    root-->pkg;
+    root-->proto;
+    root-->script;
+    root-->services;
+    root-->test;
+
+    doc-->database;
+    doc-->diagram;
+    doc-->notes;
+
+    gen-->go;
+    gen-->ts;
+
+    pkg-->go;
+    pkg-->static;
+    pkg-->ts;
+
+    proto-->eazytms;
+    proto-->lib;
+    proto-->services;
+
+
+    services-->eazytms;
+    services-->scheduler;
+
+    eazytms-->server;
+    eazytms-->client;
 ```
