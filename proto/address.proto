@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package example;
+
+option go_package = "github.com/StefanTrsunov/skeleton/gen/go/pb;pb";
+
+message Address {
+    string country = 1;
+
+    string city = 10;
+    
+    string street = 20;
+}

@@ -63,7 +63,8 @@ class TodoApp extends LitElement {
       </form>
       <ul>
         ${this.todos.map(todo => html`
-          <li>${todo.task} - ${todo.completed ? 'Completed' : 'Not Completed'}</li>
+          <!-- <li>${todo.task} - ${todo.completed ? 'Completed' : 'Not Completed'}</li> -->
+          <li>${todo.task}</li> 
         `)}
       </ul>
     `;

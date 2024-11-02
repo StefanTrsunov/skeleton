@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 
+	// _ "github.com/StefanTrsunov/skeleton/gen/go/proto"
 	_ "github.com/lib/pq"
 )
 
@@ -106,14 +107,16 @@ func addTodo(w http.ResponseWriter, r *http.Request) {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}
-		w.WriteHeader(http.StatusNoContent)
+		w.WriteHeader(http.StatusOK)
 	} else {
 		http.Error(w, "Invalid request method", http.StatusMethodNotAllowed)
 	}
 }
 
 func main() {
+	// http://http://localhost:8081/todos
 	http.HandleFunc("/todos", getTodos)
+	// http://http://localhost:8081/todos/add
 	http.HandleFunc("/todos/add", addTodo)
 	http.Handle("/", http.FileServer(http.Dir("./public")))
 	log.Fatal(http.ListenAndServe(":8081", nil)) // Ensure this port matches your frontend
