@@ -56,13 +56,13 @@ graph TD;
     gen-->go;
     gen-->ts;
 
-    pkg-->go;
+    pkg-->pkg_go;
     pkg-->static;
-    pkg-->ts;
+    pkg-->pkg_ts;
 
-    proto-->eazytms;
+    proto-->proto_eazytms;
     proto-->lib;
-    proto-->services;
+    proto-->proto_services;
 
 
     services-->eazytms;
