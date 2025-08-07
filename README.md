@@ -1,53 +1,68 @@
-# Project Skeleton for Web Apps
+# Authentication App - Go + TypeScript
 
-## Table of Contents
+Full-stack authentication app with Go backend and TypeScript frontend using gRPC protobuf for type safety.
 
-1. [Getting Started](#getting-started)
-2. [Project Structure](#project-structure)
-3. [Setup](#setup)
-4. [Running the Application](#running-the-application)
+## Tech Stack
 
-## Getting Started
+- **Backend**: Go + gRPC + PostgreSQL
+- **Frontend**: TypeScript + Lit + MVC pattern  
+- **Types**: Protobuf-generated for end-to-end type safety
+- **Database**: PostgreSQL
 
-To get started, clone the repository and follow the setup instructions below.
+## Quick Start
 
-```bash
-git clone git@github.com:StefanTrsunov/skeleton.git
-```
+### Prerequisites
 
-## Project Structure
+- Go 1.21+, Node.js 18+, pnpm, PostgreSQL, docker
 
-## Setup
-
-To have a running database with docker on port 5433 run this command in root directory:
-
-> NOTE for credential look at /docker-compose.yml
+### Setup
 
 ```bash
+# Database
 docker-compose up -d
 
+# Generate protobuf types
+make proto
+
+# Backend (port 8000)
+cd server && go run .
+
+# Frontend (port 5000)  
+cd client && pnpm install && pnpm run start
 ```
 
-* Build the UI server
+## API Endpoints
+
+- `POST /api/v1/user/create` - Register
+- `POST /api/v1/user/login` - Login  
+- `GET /api/v1/user/` - Profile
+- `GET /api/v1/hello` - Health check
+
+## Development
+
+### Type Generation
 
 ```bash
-pnpm run build
+make proto            
 ```
 
-## Running the Application
+### Adding Features
 
-> NOTE: server on port 8000
+1. Update `.proto` files
+2. Run `make proto`
+3. Implement handlers (Go) and controllers (TypeScript)
+4. Both sides automatically use updated types
 
-* Run the API server
+## Architecture Benefits
 
-```bash
-go run .
-```
+- **Type Safety**: Protobuf ensures API contract consistency
+- **Clean Separation**: HTTP REST for transport, gRPC services for logic
+- **Developer Experience**: Auto-generated types prevent API bugs
+- **Maintainable**: Clear layer boundaries and responsibilities
 
-> NOTE: clint on port 8080
+## Detailed Architecture
 
-* Start the development server:
+For in-depth architecture documentation:
 
-```bash
-pnpm run start
-```
+- **[Server Architecture](./server/README.md)** - Go backend with gRPC services
+- **[Client Architecture](./client/README.md)** - TypeScript frontend with MVC pattern

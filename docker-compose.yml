@@ -6,11 +6,11 @@ services:
     container_name: skeleton
     restart: always
     ports:
-      - "5433:5432"  # Host:Container (External port 5433 → Internal 5432)
+      - "${DB_PORT}:5432"
     environment:
-      POSTGRES_USER: skeleton
-      POSTGRES_PASSWORD: skeleton
-      POSTGRES_DB: skeleton
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:

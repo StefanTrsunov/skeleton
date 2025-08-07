@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/main.ts', // Entry point for your application
@@ -19,9 +20,15 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html', // Use our custom HTML template
+      filename: 'index.html', // Output filename
+    }),
+  ],
   devServer: {
     static: path.join(__dirname, 'dist'), // Serve static files from dist
-    port: 8080, // Port to run the dev server
+    port: 5000, // Port to run the dev server
     host: '0.0.0.0', // Allow access from external devices
     allowedHosts: 'all', // Allow all hosts
     hot: true, // Enable Hot Module Replacement (HMR)
